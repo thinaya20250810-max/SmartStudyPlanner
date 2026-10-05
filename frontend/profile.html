@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | Smart Study Planner</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<div class="dashboard-page">
+
+
+    <!-- =========================
+         SIDEBAR
+         ========================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="sidebar-logo-icon">
+                🎓
+            </div>
+
+            <h2>Smart Study</h2>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-navigation">
+
+            <a href="dashboard.html" class="nav-item">
+                <span>🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="subjects.html" class="nav-item">
+                <span>📚</span>
+                <span>Subjects</span>
+            </a>
+
+            <a href="assignments.html" class="nav-item">
+                <span>📝</span>
+                <span>Assignments</span>
+            </a>
+
+            <a href="planner.html" class="nav-item">
+                <span>📅</span>
+                <span>Study Planner</span>
+            </a>
+
+            <a href="calendar.html" class="nav-item">
+                <span>🗓️</span>
+                <span>Calendar</span>
+            </a>
+
+            <a href="progress.html" class="nav-item">
+                <span>📊</span>
+                <span>Progress</span>
+            </a>
+
+            <a href="profile.html" class="nav-item active">
+                <span>👤</span>
+                <span>Profile</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>⚙️</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Bottom Navigation -->
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html" class="nav-item logout">
+                <span>🚪</span>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+
+    <main class="dashboard-content">
+
+
+        <!-- =========================
+             PAGE HEADER
+             ========================= -->
+
+        <header class="profile-page-header">
+
+            <div>
+
+                <h1>My Profile</h1>
+
+                <p>
+                    Manage your personal and academic information.
+                </p>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             PROFILE OVERVIEW
+             ========================= -->
+
+        <section class="profile-overview-card">
+
+            <div class="profile-large-avatar">
+                👤
+            </div>
+
+
+            <div class="profile-overview-info">
+
+                <h2>Thinaya Perera</h2>
+
+                <p>
+                    thinaya@example.com
+                </p>
+
+                <span class="student-badge">
+                    Student
+                </span>
+
+            </div>
+
+
+            <div class="profile-overview-actions">
+
+                <button class="edit-profile-button">
+                    Edit Profile
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PROFILE CONTENT
+             ========================= -->
+
+        <section class="profile-content-grid">
+
+
+            <!-- =========================
+                 PERSONAL INFORMATION
+                 ========================= -->
+
+            <div class="profile-section-card">
+
+                <div class="profile-section-header">
+
+                    <div>
+
+                        <h2>Personal Information</h2>
+
+                        <p>
+                            Your basic personal details.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-form-grid">
+
+
+                    <!-- Full Name -->
+
+                    <div class="profile-form-group">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <input
+                                type="text"
+                                id="fullName"
+                                value="Thinaya Perera"
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="profile-form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                                type="email"
+                                id="email"
+                                value="thinaya@example.com"
+                        >
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="profile-form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter your phone number"
+                        >
+
+                    </div>
+
+
+                    <!-- Location -->
+
+                    <div class="profile-form-group">
+
+                        <label for="location">
+                            Location
+                        </label>
+
+                        <input
+                                type="text"
+                                id="location"
+                                placeholder="Enter your location"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 ACADEMIC INFORMATION
+                 ========================= -->
+
+            <div class="profile-section-card">
+
+                <div class="profile-section-header">
+
+                    <div>
+
+                        <h2>Academic Information</h2>
+
+                        <p>
+                            Your current academic details.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-form-grid">
+
+
+                    <!-- Institution -->
+
+                    <div class="profile-form-group">
+
+                        <label for="institution">
+                            Institution
+                        </label>
+
+                        <input
+                                type="text"
+                                id="institution"
+                                value="Informatics Institute of Technology"
+                        >
+
+                    </div>
+
+
+                    <!-- Programme -->
+
+                    <div class="profile-form-group">
+
+                        <label for="programme">
+                            Programme
+                        </label>
+
+                        <input
+                                type="text"
+                                id="programme"
+                                value="BSc (Hons) Computer Science"
+                        >
+
+                    </div>
+
+
+                    <!-- Academic Year -->
+
+                    <div class="profile-form-group">
+
+                        <label for="academicYear">
+                            Academic Year
+                        </label>
+
+                        <select id="academicYear">
+
+                            <option>Year 1</option>
+                            <option selected>Year 2</option>
+                            <option>Year 3</option>
+                            <option>Year 4</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Semester -->
+
+                    <div class="profile-form-group">
+
+                        <label for="semester">
+                            Current Semester
+                        </label>
+
+                        <select id="semester">
+
+                            <option>Semester 1</option>
+
+                            <option selected>
+                                Semester 2
+                            </option>
+
+                            <option>Semester 3</option>
+
+                            <option>Semester 4</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 ACCOUNT INFORMATION
+                 ========================= -->
+
+            <div class="profile-section-card">
+
+                <div class="profile-section-header">
+
+                    <div>
+
+                        <h2>Account Information</h2>
+
+                        <p>
+                            Information about your Smart Study Planner account.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="account-information-list">
+
+
+                    <div class="account-information-item">
+
+                        <span>
+                            Account Status
+                        </span>
+
+                        <strong class="account-active">
+                            Active
+                        </strong>
+
+                    </div>
+
+
+                    <div class="account-information-item">
+
+                        <span>
+                            Account Created
+                        </span>
+
+                        <strong>
+                            October 2026
+                        </strong>
+
+                    </div>
+
+
+                    <div class="account-information-item">
+
+                        <span>
+                            Last Login
+                        </span>
+
+                        <strong>
+                            Today
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <button class="change-password-button">
+                    🔒 Change Password
+                </button>
+
+            </div>
+
+
+
+            <!-- =========================
+                 PROFILE COMPLETION
+                 ========================= -->
+
+            <div class="profile-section-card profile-completion-card">
+
+                <div class="profile-section-header">
+
+                    <div>
+
+                        <h2>Profile Completion</h2>
+
+                        <p>
+                            Complete your profile to get better recommendations.
+                        </p>
+
+                    </div>
+
+                    <strong class="completion-percentage">
+                        75%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                            class="progress-fill progress-blue"
+                            style="width: 75%;">
+                    </div>
+
+                </div>
+
+
+                <p class="completion-message">
+
+                    Add your phone number and location to complete your profile.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             SAVE BUTTONS
+             ========================= -->
+
+        <div class="profile-actions">
+
+            <button class="cancel-profile-button">
+                Cancel
+            </button>
+
+            <button class="save-profile-button">
+                Save Changes
+            </button>
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+</body>
+
+</html>
