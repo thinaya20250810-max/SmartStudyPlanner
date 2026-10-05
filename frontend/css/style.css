@@ -716,3 +716,223 @@ body {
     }
 
 }
+/* =========================================
+   SUBJECTS PAGE
+   ========================================= */
+
+.subjects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+.subjects-header h1 {
+    font-size: 28px;
+    color: #1e293b;
+    margin-bottom: 7px;
+}
+
+
+.subjects-header p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ADD SUBJECT BUTTON
+   ========================================= */
+
+.add-subject-button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 7px;
+    background-color: #4f46e5;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+
+.add-subject-button:hover {
+    background-color: #4338ca;
+}
+
+
+/* =========================================
+   SUBJECT SUMMARY
+   ========================================= */
+
+.subject-summary {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+
+.summary-text h2 {
+    font-size: 18px;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+
+.summary-text p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+
+/* =========================================
+   SUBJECT GRID
+   ========================================= */
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* =========================================
+   SUBJECT CARD
+   ========================================= */
+
+.subject-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 22px;
+    transition: 0.2s;
+}
+
+
+.subject-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+.subject-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+
+.subject-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #eef2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+}
+
+
+.subject-code {
+    padding: 5px 9px;
+    border-radius: 5px;
+    background-color: #f1f5f9;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+.subject-card h2 {
+    font-size: 18px;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+
+.subject-description {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.6;
+    min-height: 63px;
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   SUBJECT DETAILS
+   ========================================= */
+
+.subject-details {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 15px 0;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 18px;
+}
+
+
+.subject-details span {
+    font-size: 12px;
+    color: #64748b;
+}
+
+
+/* =========================================
+   VIEW SUBJECT BUTTON
+   ========================================= */
+
+.view-subject-button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4f46e5;
+    border-radius: 7px;
+    background-color: white;
+    color: #4f46e5;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.view-subject-button:hover {
+    background-color: #4f46e5;
+    color: white;
+}
+
+
+/* =========================================
+   SUBJECTS RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .subjects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .subjects-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
