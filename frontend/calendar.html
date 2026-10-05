@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Calendar | Smart Study Planner</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-page">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="sidebar-logo-icon">
+                🎓
+            </div>
+
+            <h2>Smart Study</h2>
+
+        </div>
+
+
+        <nav class="sidebar-navigation">
+
+            <a href="dashboard.html"
+               class="nav-item">
+
+                <span>📊</span>
+                Dashboard
+
+            </a>
+
+
+            <a href="subjects.html"
+               class="nav-item">
+
+                <span>📚</span>
+                Subjects
+
+            </a>
+
+
+            <a href="assignments.html"
+               class="nav-item">
+
+                <span>📝</span>
+                Assignments
+
+            </a>
+
+
+            <a href="planner.html"
+               class="nav-item">
+
+                <span>📅</span>
+                Study Planner
+
+            </a>
+
+
+            <a href="calendar.html"
+               class="nav-item active">
+
+                <span>🗓️</span>
+                Calendar
+
+            </a>
+
+
+            <a href="#"
+               class="nav-item">
+
+                <span>📈</span>
+                Progress
+
+            </a>
+
+
+            <a href="#"
+               class="nav-item">
+
+                <span>👤</span>
+                Profile
+
+            </a>
+
+
+            <a href="#"
+               class="nav-item">
+
+                <span>⚙️</span>
+                Settings
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html"
+               class="nav-item logout">
+
+                <span>🚪</span>
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="dashboard-content">
+
+
+        <!-- Page Header -->
+
+        <header class="calendar-header">
+
+            <div>
+
+                <h1>Calendar</h1>
+
+                <p>
+                    View your assignments, deadlines and study sessions.
+                </p>
+
+            </div>
+
+
+            <button class="add-calendar-button">
+
+                + Add Event
+
+            </button>
+
+        </header>
+
+
+
+        <!-- ================= CALENDAR CARD ================= -->
+
+        <section class="calendar-card">
+
+
+            <!-- Calendar Top -->
+
+            <div class="calendar-top">
+
+                <button class="calendar-navigation-button">
+                    ←
+                </button>
+
+
+                <h2>
+                    October 2026
+                </h2>
+
+
+                <button class="calendar-navigation-button">
+                    →
+                </button>
+
+            </div>
+
+
+            <!-- Today Button -->
+
+            <div class="calendar-controls">
+
+                <button class="today-button">
+                    Today
+                </button>
+
+
+                <div class="calendar-legend">
+
+                    <span>
+                        <i class="legend-dot assignment-dot"></i>
+                        Assignment
+                    </span>
+
+                    <span>
+                        <i class="legend-dot study-dot"></i>
+                        Study Session
+                    </span>
+
+                    <span>
+                        <i class="legend-dot deadline-dot"></i>
+                        Important
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= DAYS ================= -->
+
+            <div class="calendar-weekdays">
+
+                <div>MON</div>
+                <div>TUE</div>
+                <div>WED</div>
+                <div>THU</div>
+                <div>FRI</div>
+                <div>SAT</div>
+                <div>SUN</div>
+
+            </div>
+
+
+
+            <!-- ================= CALENDAR DATES ================= -->
+
+            <div class="calendar-grid">
+
+
+                <!-- Previous month -->
+
+                <div class="calendar-day other-month">
+                    <span class="date-number">28</span>
+                </div>
+
+                <div class="calendar-day other-month">
+                    <span class="date-number">29</span>
+                </div>
+
+                <div class="calendar-day other-month">
+                    <span class="date-number">30</span>
+                </div>
+
+
+                <!-- October 1 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        1
+                    </span>
+
+                    <div class="calendar-event study-event">
+                        Database Study
+                    </div>
+
+                </div>
+
+
+                <!-- October 2 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        2
+                    </span>
+
+                    <div class="calendar-event study-event">
+                        Java Practice
+                    </div>
+
+                </div>
+
+
+                <!-- October 3 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        3
+                    </span>
+
+                </div>
+
+
+                <!-- October 4 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        4
+                    </span>
+
+                </div>
+
+
+                <!-- October 5 -->
+
+                <div class="calendar-day today">
+
+                    <span class="date-number">
+                        5
+                    </span>
+
+                    <div class="calendar-event study-event">
+                        Database Systems
+                    </div>
+
+                </div>
+
+
+                <!-- October 6 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        6
+                    </span>
+
+                    <div class="calendar-event study-event">
+                        Java Programming
+                    </div>
+
+                </div>
+
+
+                <!-- October 7 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        7
+                    </span>
+
+                    <div class="calendar-event study-event">
+                        Mathematics
+                    </div>
+
+                </div>
+
+
+                <!-- October 8 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        8
+                    </span>
+
+                    <div class="calendar-event study-event">
+                        Web Technology
+                    </div>
+
+                </div>
+
+
+                <!-- October 9 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        9
+                    </span>
+
+                    <div class="calendar-event assignment-event">
+                        Java Project
+                    </div>
+
+                </div>
+
+
+                <!-- October 10 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        10
+                    </span>
+
+                    <div class="calendar-event study-event">
+                        Python Practice
+                    </div>
+
+                </div>
+
+
+                <!-- October 11 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        11
+                    </span>
+
+                </div>
+
+
+                <!-- October 12 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        12
+                    </span>
+
+                    <div class="calendar-event deadline-event">
+                        Database Due
+                    </div>
+
+                </div>
+
+
+                <!-- October 13 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        13
+                    </span>
+
+                    <div class="calendar-event study-event">
+                        SQL Practice
+                    </div>
+
+                </div>
+
+
+                <!-- October 14 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        14
+                    </span>
+
+                </div>
+
+
+                <!-- October 15 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        15
+                    </span>
+
+                    <div class="calendar-event assignment-event">
+                        Web Report
+                    </div>
+
+                </div>
+
+
+                <!-- October 16 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        16
+                    </span>
+
+                </div>
+
+
+                <!-- October 17 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        17
+                    </span>
+
+                </div>
+
+
+                <!-- October 18 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        18
+                    </span>
+
+                    <div class="calendar-event deadline-event">
+                        Java Project Due
+                    </div>
+
+                </div>
+
+
+                <!-- October 19 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        19
+                    </span>
+
+                </div>
+
+
+                <!-- October 20 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        20
+                    </span>
+
+                    <div class="calendar-event deadline-event">
+                        Web Report Due
+                    </div>
+
+                </div>
+
+
+                <!-- October 21 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        21
+                    </span>
+
+                </div>
+
+
+                <!-- October 22 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        22
+                    </span>
+
+                    <div class="calendar-event study-event">
+                        Mathematics
+                    </div>
+
+                </div>
+
+
+                <!-- October 23 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        23
+                    </span>
+
+                </div>
+
+
+                <!-- October 24 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        24
+                    </span>
+
+                </div>
+
+
+                <!-- October 25 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        25
+                    </span>
+
+                    <div class="calendar-event assignment-event">
+                        Mathematics
+                    </div>
+
+                </div>
+
+
+                <!-- October 26 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        26
+                    </span>
+
+                </div>
+
+
+                <!-- October 27 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        27
+                    </span>
+
+                </div>
+
+
+                <!-- October 28 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        28
+                    </span>
+
+                </div>
+
+
+                <!-- October 29 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        29
+                    </span>
+
+                    <div class="calendar-event study-event">
+                        Revision
+                    </div>
+
+                </div>
+
+
+                <!-- October 30 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        30
+                    </span>
+
+                </div>
+
+
+                <!-- October 31 -->
+
+                <div class="calendar-day">
+
+                    <span class="date-number">
+                        31
+                    </span>
+
+                </div>
+
+
+                <!-- November -->
+
+                <div class="calendar-day other-month">
+                    <span class="date-number">1</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= UPCOMING EVENTS ================= -->
+
+        <section class="upcoming-calendar-section">
+
+            <div class="upcoming-header">
+
+                <div>
+
+                    <h2>Upcoming Deadlines</h2>
+
+                    <p>
+                        Important dates coming up.
+                    </p>
+
+                </div>
+
+                <a href="assignments.html">
+                    View Assignments
+                </a>
+
+            </div>
+
+
+            <div class="upcoming-events">
+
+
+                <div class="upcoming-event">
+
+                    <div class="upcoming-date">
+                        <strong>12</strong>
+                        <span>OCT</span>
+                    </div>
+
+                    <div class="upcoming-details">
+
+                        <h3>
+                            Database Coursework
+                        </h3>
+
+                        <p>
+                            Database Systems • CM1604
+                        </p>
+
+                    </div>
+
+                    <span class="upcoming-priority high">
+                        High Priority
+                    </span>
+
+                </div>
+
+
+
+                <div class="upcoming-event">
+
+                    <div class="upcoming-date">
+                        <strong>18</strong>
+                        <span>OCT</span>
+                    </div>
+
+                    <div class="upcoming-details">
+
+                        <h3>
+                            Java OOP Project
+                        </h3>
+
+                        <p>
+                            Java Programming • CM1603
+                        </p>
+
+                    </div>
+
+                    <span class="upcoming-priority medium">
+                        Medium Priority
+                    </span>
+
+                </div>
+
+
+
+                <div class="upcoming-event">
+
+                    <div class="upcoming-date">
+                        <strong>20</strong>
+                        <span>OCT</span>
+                    </div>
+
+                    <div class="upcoming-details">
+
+                        <h3>
+                            Web Technology Report
+                        </h3>
+
+                        <p>
+                            Web Technology • CM1605
+                        </p>
+
+                    </div>
+
+                    <span class="upcoming-priority high">
+                        High Priority
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+</body>
+</html>
