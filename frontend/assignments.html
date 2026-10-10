@@ -1,631 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Assignments | Smart Study Planner</title>
-
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
-
 <body>
-
 <div class="dashboard-page">
 
-
-    <!-- =========================================
-         SIDEBAR
-         ========================================= -->
-
+    <!-- SIDEBAR -->
     <aside class="sidebar">
-
         <div class="sidebar-logo">
-
-            <div class="sidebar-logo-icon">
-                🎓
-            </div>
-
+            <div class="sidebar-logo-icon">🎓</div>
             <h2>Smart Study Planner</h2>
-
         </div>
-
-
-        <!-- Navigation -->
 
         <nav class="sidebar-navigation">
-
-            <a href="dashboard.html" class="nav-item">
-                🏠
-                <span>Dashboard</span>
-            </a>
-
-            <a href="subjects.html" class="nav-item">
-                📚
-                <span>Subjects</span>
-            </a>
-
-            <a href="assignments.html" class="nav-item active">
-                📝
-                <span>Assignments</span>
-            </a>
-
-            <a href="planner.html" class="nav-item">
-                📅
-                <span>Study Planner</span>
-            </a>
-
-            <a href="calendar.html" class="nav-item">
-                🗓️
-                <span>Calendar</span>
-            </a>
-
-            <a href="progress.html" class="nav-item">
-                📊
-                <span>Progress</span>
-            </a>
-
-            <a href="profile.html" class="nav-item">
-                👤
-                <span>Profile</span>
-            </a>
-
+            <a href="dashboard.html" class="nav-item">🏠 <span>Dashboard</span></a>
+            <a href="subjects.html" class="nav-item">📚 <span>Subjects</span></a>
+            <a href="assignments.html" class="nav-item active">📝 <span>Assignments</span></a>
+            <a href="planner.html" class="nav-item">📅 <span>Study Planner</span></a>
+            <a href="calendar.html" class="nav-item">🗓️ <span>Calendar</span></a>
+            <a href="progress.html" class="nav-item">📊 <span>Progress</span></a>
+            <a href="profile.html" class="nav-item">👤 <span>Profile</span></a>
         </nav>
 
-
-        <!-- Bottom Navigation -->
-
         <div class="sidebar-bottom">
-
-            <a href="settings.html" class="nav-item">
-                ⚙️
-                <span>Settings</span>
-            </a>
-
-            <a href="login.html" class="nav-item logout">
-                🚪
-                <span>Logout</span>
-            </a>
-
+            <a href="settings.html" class="nav-item">⚙️ <span>Settings</span></a>
+            <a href="#" class="nav-item logout" id="logoutButton">🚪 <span>Logout</span></a>
         </div>
-
     </aside>
 
-
-
-    <!-- =========================================
-         MAIN CONTENT
-         ========================================= -->
-
+    <!-- MAIN CONTENT -->
     <main class="dashboard-content">
 
-
-        <!-- Page Header -->
-
         <header class="assignments-header">
-
             <div>
-
                 <h1>My Assignments</h1>
-
-                <p>
-                    Keep track of your coursework and upcoming deadlines.
-                </p>
-
+                <p>Organise your coursework and stay on top of deadlines.</p>
             </div>
 
-
-            <button class="add-assignment-button">
+            <button type="button" class="add-assignment-button" id="addAssignmentButton">
                 + Add Assignment
             </button>
-
         </header>
 
-
-
-        <!-- =========================================
-             FILTERS
-             ========================================= -->
-
-        <section class="assignment-filters">
-
-            <div class="filter-group">
-
-                <label for="subjectFilter">
-                    Subject
-                </label>
-
-                <select id="subjectFilter">
-
-                    <option value="all">
-                        All Subjects
-                    </option>
-
-                    <option value="database">
-                        Database Systems
-                    </option>
-
-                    <option value="java">
-                        Java Programming
-                    </option>
-
-                    <option value="mathematics">
-                        Mathematics
-                    </option>
-
-                    <option value="web">
-                        Web Technology
-                    </option>
-
-                    <option value="programming">
-                        Programming
-                    </option>
-
-                    <option value="data-structures">
-                        Data Structures
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <div class="filter-group">
-
-                <label for="statusFilter">
-                    Status
-                </label>
-
-                <select id="statusFilter">
-
-                    <option value="all">
-                        All Status
-                    </option>
-
-                    <option value="pending">
-                        Pending
-                    </option>
-
-                    <option value="in-progress">
-                        In Progress
-                    </option>
-
-                    <option value="completed">
-                        Completed
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <div class="filter-group">
-
-                <label for="priorityFilter">
-                    Priority
-                </label>
-
-                <select id="priorityFilter">
-
-                    <option value="all">
-                        All Priorities
-                    </option>
-
-                    <option value="high">
-                        High
-                    </option>
-
-                    <option value="medium">
-                        Medium
-                    </option>
-
-                    <option value="low">
-                        Low
-                    </option>
-
-                </select>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             ASSIGNMENT SUMMARY
-             ========================================= -->
-
+        <!-- SUMMARY CARDS -->
         <section class="assignment-summary">
-
-            <div class="assignment-summary-card">
-
-                <span class="summary-number">
-                    10
-                </span>
-
-                <span class="summary-label">
-                    Total Assignments
-                </span>
-
+            <div class="summary-card">
+                <p>Total Assignments</p>
+                <h2 id="totalAssignments">0</h2>
             </div>
 
-
-            <div class="assignment-summary-card">
-
-                <span class="summary-number pending-number">
-                    4
-                </span>
-
-                <span class="summary-label">
-                    Pending
-                </span>
-
+            <div class="summary-card">
+                <p>Pending</p>
+                <h2 id="pendingAssignments">0</h2>
             </div>
 
-
-            <div class="assignment-summary-card">
-
-                <span class="summary-number progress-number">
-                    3
-                </span>
-
-                <span class="summary-label">
-                    In Progress
-                </span>
-
+            <div class="summary-card">
+                <p>In Progress</p>
+                <h2 id="inProgressAssignments">0</h2>
             </div>
 
-
-            <div class="assignment-summary-card">
-
-                <span class="summary-number completed-number">
-                    3
-                </span>
-
-                <span class="summary-label">
-                    Completed
-                </span>
-
+            <div class="summary-card">
+                <p>Completed</p>
+                <h2 id="completedAssignments">0</h2>
             </div>
-
         </section>
 
+        <!-- ADD / EDIT FORM -->
+        <section class="assignment-form-card" id="assignmentFormCard" hidden>
+            <h2 id="assignmentFormHeading">Add New Assignment</h2>
 
+            <form id="assignmentForm">
+                <input type="hidden" id="assignmentId">
 
-        <!-- =========================================
-             ASSIGNMENT LIST
-             ========================================= -->
-
-        <section class="assignments-list">
-
-
-            <!-- Assignment 1 -->
-
-            <div class="assignment-card">
-
-                <div class="assignment-main">
-
-                    <div class="assignment-icon">
-                        🗄️
-                    </div>
-
-
-                    <div class="assignment-information">
-
-                        <div class="assignment-title-row">
-
-                            <h2>
-                                Database Coursework
-                            </h2>
-
-                            <span class="priority high">
-                                High
-                            </span>
-
-                        </div>
-
-
-                        <p class="assignment-subject">
-                            Database Systems
-                        </p>
-
-
-                        <p class="assignment-description">
-                            Complete the database design, ER diagram
-                            and SQL implementation.
-                        </p>
-
-
-                        <div class="assignment-meta">
-
-                            <span>
-                                📅 Due: 12 October 2026
-                            </span>
-
-                            <span>
-                                ⏱ Estimated: 8 hours
-                            </span>
-
-                        </div>
-
-                    </div>
-
+                <div class="form-group">
+                    <label for="assignmentTitle">Assignment Title *</label>
+                    <input type="text" id="assignmentTitle" maxlength="100"
+                           placeholder="e.g. Database Coursework" required>
                 </div>
 
-
-                <div class="assignment-status">
-
-                    <span class="status in-progress">
-                        In Progress
-                    </span>
-
-                    <div class="progress-bar">
-
-                        <div
-                                class="progress-fill"
-                                style="width: 60%;">
-                        </div>
-
-                    </div>
-
-                    <span class="progress-text">
-                        60%
-                    </span>
-
+                <div class="form-group">
+                    <label for="assignmentSubject">Subject *</label>
+                    <select id="assignmentSubject" required>
+                        <option value="">Choose a subject</option>
+                    </select>
                 </div>
 
-            </div>
-
-
-
-            <!-- Assignment 2 -->
-
-            <div class="assignment-card">
-
-                <div class="assignment-main">
-
-                    <div class="assignment-icon">
-                        ☕
-                    </div>
-
-
-                    <div class="assignment-information">
-
-                        <div class="assignment-title-row">
-
-                            <h2>
-                                Java OOP Project
-                            </h2>
-
-                            <span class="priority medium">
-                                Medium
-                            </span>
-
-                        </div>
-
-
-                        <p class="assignment-subject">
-                            Java Programming
-                        </p>
-
-
-                        <p class="assignment-description">
-                            Implement the required Java classes
-                            using object-oriented programming concepts.
-                        </p>
-
-
-                        <div class="assignment-meta">
-
-                            <span>
-                                📅 Due: 18 October 2026
-                            </span>
-
-                            <span>
-                                ⏱ Estimated: 6 hours
-                            </span>
-
-                        </div>
-
-                    </div>
-
+                <div class="form-group">
+                    <label for="assignmentDueDate">Due Date *</label>
+                    <input type="date" id="assignmentDueDate" required>
                 </div>
 
-
-                <div class="assignment-status">
-
-                    <span class="status pending">
-                        Pending
-                    </span>
-
-                    <div class="progress-bar">
-
-                        <div
-                                class="progress-fill"
-                                style="width: 20%;">
-                        </div>
-
-                    </div>
-
-                    <span class="progress-text">
-                        20%
-                    </span>
-
+                <div class="form-group">
+                    <label for="assignmentPriority">Priority *</label>
+                    <select id="assignmentPriority" required>
+                        <option value="Low">Low</option>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="High">High</option>
+                    </select>
                 </div>
 
-            </div>
-
-
-
-            <!-- Assignment 3 -->
-
-            <div class="assignment-card">
-
-                <div class="assignment-main">
-
-                    <div class="assignment-icon">
-                        🌐
-                    </div>
-
-
-                    <div class="assignment-information">
-
-                        <div class="assignment-title-row">
-
-                            <h2>
-                                Web Technology Report
-                            </h2>
-
-                            <span class="priority high">
-                                High
-                            </span>
-
-                        </div>
-
-
-                        <p class="assignment-subject">
-                            Web Technology
-                        </p>
-
-
-                        <p class="assignment-description">
-                            Complete the website development and
-                            submit the accompanying report.
-                        </p>
-
-
-                        <div class="assignment-meta">
-
-                            <span>
-                                📅 Due: 20 October 2026
-                            </span>
-
-                            <span>
-                                ⏱ Estimated: 7 hours
-                            </span>
-
-                        </div>
-
-                    </div>
-
+                <div class="form-group">
+                    <label for="assignmentHours">Estimated Study Hours</label>
+                    <input type="number" id="assignmentHours" min="0.5"
+                           max="500" step="0.5" value="2">
                 </div>
 
-
-                <div class="assignment-status">
-
-                    <span class="status pending">
-                        Pending
-                    </span>
-
-                    <div class="progress-bar">
-
-                        <div
-                                class="progress-fill"
-                                style="width: 10%;">
-                        </div>
-
-                    </div>
-
-                    <span class="progress-text">
-                        10%
-                    </span>
-
+                <div class="form-group">
+                    <label for="assignmentDescription">Description</label>
+                    <textarea id="assignmentDescription" rows="3" maxlength="1000"
+                              placeholder="What do you need to complete?"></textarea>
                 </div>
 
-            </div>
+                <div class="assignment-form-actions">
+                    <button type="submit" class="add-assignment-button" id="saveAssignmentButton">
+                        Save Assignment
+                    </button>
 
-
-
-            <!-- Assignment 4 -->
-
-            <div class="assignment-card">
-
-                <div class="assignment-main">
-
-                    <div class="assignment-icon">
-                        📐
-                    </div>
-
-
-                    <div class="assignment-information">
-
-                        <div class="assignment-title-row">
-
-                            <h2>
-                                Mathematics Coursework
-                            </h2>
-
-                            <span class="priority low">
-                                Low
-                            </span>
-
-                        </div>
-
-
-                        <p class="assignment-subject">
-                            Mathematics
-                        </p>
-
-
-                        <p class="assignment-description">
-                            Complete the required calculations,
-                            analysis and RStudio implementation.
-                        </p>
-
-
-                        <div class="assignment-meta">
-
-                            <span>
-                                📅 Due: 25 October 2026
-                            </span>
-
-                            <span>
-                                ⏱ Estimated: 5 hours
-                            </span>
-
-                        </div>
-
-                    </div>
-
+                    <button type="button" class="view-subject-button" id="cancelAssignmentButton">
+                        Cancel
+                    </button>
                 </div>
-
-
-                <div class="assignment-status">
-
-                    <span class="status completed">
-                        Completed
-                    </span>
-
-                    <div class="progress-bar">
-
-                        <div
-                                class="progress-fill completed-fill"
-                                style="width: 100%;">
-                        </div>
-
-                    </div>
-
-                    <span class="progress-text">
-                        100%
-                    </span>
-
-                </div>
-
-            </div>
-
-
+            </form>
         </section>
 
+        <!-- FILTERS -->
+        <section class="assignment-filters">
+            <div class="form-group">
+                <label for="searchAssignments">Search</label>
+                <input type="search" id="searchAssignments"
+                       placeholder="Search assignments...">
+            </div>
+
+            <div class="form-group">
+                <label for="subjectFilter">Subject</label>
+                <select id="subjectFilter">
+                    <option value="all">All Subjects</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="statusFilter">Status</label>
+                <select id="statusFilter">
+                    <option value="all">All Statuses</option>
+                    <option value="Pending">Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="priorityFilter">Priority</label>
+                <select id="priorityFilter">
+                    <option value="all">All Priorities</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- ASSIGNMENT CARDS -->
+        <section class="assignments-list" id="assignmentsList">
+            <p>Loading assignments...</p>
+        </section>
 
     </main>
-
 </div>
-<script src="js/main.js"></script>
-</body>
 
+<script src="js/main.js"></script>
+<script src="js/assignments.js"></script>
+</body>
 </html>
